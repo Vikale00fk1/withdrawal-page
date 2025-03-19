@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>withdrawal</title>
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- Place your stylesheet here-->
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+    <div id="withdrawal" class="withdrawal">
+
+        <form id="col" method="post" action="payout">
+
+
+            <figure></figure>
+
+            <div class="to-flex">
+
+                <h1>Details </h1>
+                <i class="fa fa-times"></i>
+
+            </div>
+
+
+            <div class="details">
+                <h1>GPHIX</h1>
+                <p>16 gallons . Regular with Techron</p>
+
+                <div class="holder">
+                    <p>Where</p>
+                    <h3>4560 E Washington Blvd, commerce</h3>
+
+                </div>
+
+                <div class="holder">
+                    <p>When</p>
+                    <h3>16:00, August 16, 2022</h3>
+
+                </div>
+
+                <div class="holder">
+                    <p>Account number</p>
+
+                    <input oninput="maxnumber()" id="max" type="number" name="number" placeholder="0123456789" maxlength="10">
+
+                </div>
+
+                <div class="holder">
+                    <p>Bank name</p>
+                    <select name="cars" id="myselect">
+                        <option value="volvo">Select bank</option>
+                        <option value="saab">first bank</option>
+                        <option value="mercedes">UBA</option>
+                        <option value="audi">Opay</option>
+                        <option value="audi">Palmpay</option>
+                    </select>
+
+                </div>
+
+                <div class="holder">
+                    <p>Amount taken</p>
+                    <h3>$88.20</h3>
+
+                </div>
+
+                <div class="holder">
+                    <p>Service fee</p>
+                    <h3>$0.20</h3>
+
+                </div>
+
+
+
+            </div>
+
+            <h3>Transaction number #2143957566</h3>
+            <h4> <i class="fa fa-bug"></i>Issues with transaction</h4>
+
+            <button onclick="validate()">Transfer</button>
+
+            <figure></figure>
+
+        </form>
+
+    </div>
+
+
+    <script>
+        window.onload = function() {
+            //        alert("working")
+            document.getElementById("withdrawal").style.bottom = 0;
+            document.getElementById("withdrawal").style.transition = "1s  ";
+        }
+
+        function maxnumber() {
+            var accnumber = document.getElementById("max").value;
+
+            var maxLength = 10;
+
+            if (accnumber.length > maxLength) {
+                alert("Account number cannot be more than 10 numbers");
+            }
+
+        }
+
+        function validate() {
+
+            var inputfield = document.getElementById("max").value;
+            var selectOption = document.getElementById("myselect").value;
+
+            if (inputfield == ""  || selectOption == "") {
+                alert("Fill out all fields");
+
+            }
+
+        }
+    </script>
+
+</body></html>
